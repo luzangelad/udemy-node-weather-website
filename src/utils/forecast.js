@@ -11,7 +11,7 @@ const forecast = (longitude, latitude, callback) => {
             const current = body.currently
             const today = body.daily.data[0]
             callback( undefined, `${today.summary} It is currently ${current.temperature} degress out. There is a ${current.precipProbability}% chance of rain. 
-            The minimum temperature is ${today.temperatureMin} degress with a high of ${today.temperatureMax}`)
+            The low today is ${today.temperatureMin} degress with a high of ${today.temperatureMax}.`)
         }
     })
 }
